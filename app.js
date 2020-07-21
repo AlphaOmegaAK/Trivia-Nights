@@ -1,10 +1,33 @@
 const express = require('express');
+require('dotenv').config;
 const app = express();
 
-const PORT = process.env.PORT || 4000;
+//?   Controllers
+const userCtrl = require('./controllers/user');
 
+//?   Views
+app.set('view engine', 'ejs');
+
+//?   Middleware
+app.use(express.static(`${__dirname}/public`));
+app.use(express.urlencoded({
+  extended: false
+}));
+
+
+// ?  Home Route
 app.get('/', (req, res) => {
-  res.send('<h1> Trivia Nights</h1>');
+  res.render('index');
 });
 
+//?   User Route
+app.use('user', userCtrl);
+
+
+
+
+
+
+
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, console.log(`Server Running on port: ${PORT}`))
