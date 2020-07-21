@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const session = require('express-session');
 const methodOverride = require('method-override')
 require('dotenv').config;
+require('./models/db')
 const MongoStore = require('connect-mongo')(session)
 
 const app = express();
@@ -22,16 +23,13 @@ app.use(express.urlencoded({
   extended: false
 }));
 
-app.use(
-  session({
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-    store: new MongoStore({
-      mongooseConnection: mongoose.connection
-    })
-  })
-);
+
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+
+}))
 
 
 // ?  Home Route

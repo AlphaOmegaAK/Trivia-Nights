@@ -10,8 +10,3 @@ mongoose.connect(connectionString, {
   })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err))
-
-
-module.exports = {
-  User = require('./User')
-}
