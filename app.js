@@ -1,7 +1,9 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const session = require('express-session');
 const methodOverride = require('method-override')
 require('dotenv').config;
+const MongoStore = require('connect-mongo')(session)
 const app = express();
 
 //?   Controllers
@@ -18,6 +20,17 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({
   extended: false
 }));
+
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection
+    })
+  })
+);
 
 
 // ?  Home Route
