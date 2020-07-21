@@ -6,7 +6,7 @@ mongoose.connect(connectionString, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
-    useFindAndModify: falsel,
+    useFindAndModify: false,
   })
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err))
