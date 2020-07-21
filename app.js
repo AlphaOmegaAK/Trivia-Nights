@@ -15,7 +15,7 @@ const userCtrl = require('./controllers/user');
 app.set('view engine', 'ejs');
 
 //?   Middleware
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(__dirname + '/public'));
 
 app.use(methodOverride('_method'));
 
