@@ -4,6 +4,7 @@ const session = require('express-session');
 const methodOverride = require('method-override')
 require('dotenv').config;
 const MongoStore = require('connect-mongo')(session)
+
 const app = express();
 
 //?   Controllers
@@ -23,9 +24,9 @@ app.use(express.urlencoded({
 
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,
+    secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     store: new MongoStore({
       mongooseConnection: mongoose.connection
     })
@@ -42,7 +43,7 @@ app.get('/', (req, res) => {
 app.use('user', userCtrl);
 
 
-
+//Desc :  404  Route : req.url
 
 
 
