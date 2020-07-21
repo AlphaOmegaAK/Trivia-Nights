@@ -1,7 +1,10 @@
 const express = require('express');
+const mongoose = require('mongoose')
 const session = require('express-session');
 const methodOverride = require('method-override')
 require('dotenv').config;
+const MongoStore = require('connect-mongo')(session)
+
 const app = express();
 
 //?   Controllers
@@ -19,6 +22,17 @@ app.use(express.urlencoded({
   extended: false
 }));
 
+app.use(
+  session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection
+    })
+  })
+);
+
 
 // ?  Home Route
 app.get('/', (req, res) => {
@@ -29,7 +43,7 @@ app.get('/', (req, res) => {
 app.use('user', userCtrl);
 
 
-
+//Desc :  404  Route : req.url
 
 
 
