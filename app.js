@@ -1,4 +1,6 @@
 const express = require('express');
+const session = require('express-session');
+const methodOverride = require('method-override')
 require('dotenv').config;
 const app = express();
 
@@ -10,6 +12,9 @@ app.set('view engine', 'ejs');
 
 //?   Middleware
 app.use(express.static(`${__dirname}/public`));
+
+app.use(methodOverride('_method'));
+
 app.use(express.urlencoded({
   extended: false
 }));
