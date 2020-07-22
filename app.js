@@ -2,8 +2,15 @@ const express = require('express');
 const mongoose = require('mongoose')
 const session = require('express-session');
 const methodOverride = require('method-override')
-require('dotenv').config;
+const dotenv = require('dotenv')
 const MongoStore = require('connect-mongo')(session)
+require('./models/db')
+
+//? Config Load
+dotenv.config({
+  path: './config/config.env'
+});
+
 
 const app = express();
 
@@ -22,11 +29,12 @@ app.use(express.urlencoded({
   extended: false
 }));
 
+
 app.use(
   session({
-    secret: 'keyboard cat',
+    secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
     store: new MongoStore({
       mongooseConnection: mongoose.connection
     })
@@ -37,6 +45,15 @@ app.use(
 // ?  Home Route
 app.get('/', (req, res) => {
   res.render('index');
+});
+
+app.get('/login', (req, res) => {
+  res.render('login');
+
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup');
 });
 
 //?   User Route
