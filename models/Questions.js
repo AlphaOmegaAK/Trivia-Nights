@@ -9,6 +9,10 @@ const questionsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    wrongAnswers: {
+        type: Array,
+        required: true,
+    }
 })
 
 module.export = mongoose.model('Questions', questionsSchema);
