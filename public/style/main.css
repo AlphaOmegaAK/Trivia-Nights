@@ -22,6 +22,18 @@ header {
   background: linear-gradient(179.46deg, #C45554 -6%, rgba(130, 34, 35, 0.2) 50.24%);
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+#buttn {
+  background-color: #FAB74F;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
 main {
   min-height: 100vh;
 }
