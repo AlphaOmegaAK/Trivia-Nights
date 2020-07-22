@@ -68,7 +68,9 @@ app.use('user', userCtrl);
 
 //Desc :  404  Route : req.url
 
-
+app.get(`*`, (req, res) => {
+  res.render(`404`);
+});
 
 
 const PORT = process.env.PORT || 4000;
