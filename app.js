@@ -50,9 +50,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/login', (req, res) => {
-  res.render('login')
-  console.log('log in page')
-})
+  res.render('login');
+
+});
+
+app.get('/signup', (req, res) => {
+  res.render('signup');
+});
 
 //?   User Route
 app.use('user', userCtrl);
