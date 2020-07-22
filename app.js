@@ -1,4 +1,3 @@
-const path = require('path')
 const express = require('express');
 const mongoose = require('mongoose')
 const session = require('express-session');
@@ -39,7 +38,6 @@ app.use(
     store: new MongoStore({
       mongooseConnection: mongoose.connection
     })
-
   })
 );
 
