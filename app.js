@@ -16,14 +16,14 @@ dotenv.config({
 
 const app = express();
 
-//?   Controllers
+//   Controllers
 const userCtrl = require('./controllers/user');
 const gameCtrl = require(`./controllers/game`);
 app.use(`/game`, gameCtrl)
-//?   Views
+//   Views
 app.set('view engine', 'ejs');
 
-//?   Middleware
+//   Middleware
 app.use(express.static(__dirname + '/public'));
 
 app.use(methodOverride('_method'));
