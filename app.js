@@ -53,6 +53,11 @@ app.get('/', (req, res) => {
   })
 });
 
+app.get('/dash', (req, res) => {
+  res.render('dash');
+
+});
+
 app.get('/login', (req, res) => {
   res.render('login');
 
