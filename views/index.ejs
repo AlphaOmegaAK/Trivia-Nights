@@ -21,7 +21,7 @@
               
               <div class="answer">
                 <input type="radio" id="answer1" name="1" value="1">
-                <label for="1">Answer 1</label>
+                <label for="1"><%=questions.wrongAnswers[0]%></label>
               </div>
       
               <div class="answer">
@@ -31,14 +31,18 @@
       
               <div class="answer">
                 <input type="radio" id="answer3" name="3" value="3">
-                <label for="3">Answer 3</label>
+                <label for="3"><%=questions.wrongAnswers[1]%></label>
               </div>
       
               <div class="answer">
                 <input type="radio" id="answer4" name="4" value="4">
-                <label for="4">Answer 4</label>
+                <label for="4"><%=questions.wrongAnswers[2]%></label>
               </div>
     
+              <p>
+                <input type="submit" value="Submit">
+              <p>
+
             </div>
         </div>
 
