@@ -78,42 +78,28 @@ footer {
   width: 100vw;
   padding: 2% 5%;
   font-size: 1.3em;
-  color: #fff;
+
   text-align: center;
 }
 
-/* ! Facebook */
 
 .fa-facebook {
-  color: #3e5c9a;
-  float: right;
-  width: 40px;
+  background-color: #3e5c9a;
+ 
 }
 
-.fa-facebook:hover {
-  float: right;
-  width: 40px;
-}
 
 /* ! Instagram */
-
 .fa-instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+  background-color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
 
 .fa-instagram:hover {
   float: right;
-  width: 40px;
+ 
 }
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
+
 
 /* Add a hover effect if you want */
 
@@ -121,7 +107,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Set a specific color for each brand */
 
 /* Facebook */
 
@@ -136,3 +121,9 @@ footer {
   background: #55ACEE;
   color: white;
 }
+.fa-linkedin{
+  color: #0e72a3;
+}
+.fa-github-square {
+  color: #212121;
+  }
