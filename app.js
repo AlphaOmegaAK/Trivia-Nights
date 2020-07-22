@@ -4,7 +4,7 @@ const session = require('express-session');
 const methodOverride = require('method-override')
 require('dotenv').config;
 require('./models/db')
-const MongoStore = require('connect-mongo')(session)
+// const MongoStore = require('connect-mongo')(session)
 
 const app = express();
 
@@ -24,12 +24,12 @@ app.use(express.urlencoded({
 }));
 
 
-app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
+// app.use(session({
+//   secret: 'keyboard cat',
+//   resave: false,
+//   saveUninitialized: true,
 
-}));
+// }));
 
 
 // ?  Home Route
@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('login')
+  console.log('log in page')
 })
 
 //?   User Route
