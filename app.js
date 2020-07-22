@@ -5,6 +5,7 @@ const session = require('express-session');
 const methodOverride = require('method-override')
 const dotenv = require('dotenv')
 const MongoStore = require('connect-mongo')(session)
+const questions = require('./models/questionsArr');
 require('./models/db')
 
 //? Config Load
@@ -47,7 +48,9 @@ app.use(
 
 // ?  Home Route
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    questions: questions,
+  })
 });
 
 app.get('/login', (req, res) => {

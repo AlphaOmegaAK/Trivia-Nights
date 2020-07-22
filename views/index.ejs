@@ -11,7 +11,7 @@
     <%- include('./partials/_navBar') %>
     <% questions.forEach(function(questions){ %>
     <form action="/submitAnswer">
-      <label><%=questions%></label><br>
+      <label><%=questions.question%></label><br>
       <input type="radio" id="answer1" name="1" value="1">
       <label for="1">Answer 1</label><br>
       <input type="radio" id="answer2" name="2" value="2">
