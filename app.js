@@ -17,7 +17,8 @@ const app = express();
 
 //?   Controllers
 const userCtrl = require('./controllers/user');
-
+const gameCtrl = require(`./controllers/game`);
+app.use(`/game`, gameCtrl)
 //?   Views
 app.set('view engine', 'ejs');
 
