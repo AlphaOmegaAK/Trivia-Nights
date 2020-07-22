@@ -28,6 +28,10 @@ header {
   border-radius: 7px;
 }
 
+.nav-link {
+  color: #822223;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -40,9 +44,28 @@ header {
   border-radius: 7px;
 }
 
+.dash {
+  display: flex;
+  justify-content: center;
+}
+
+.dashBox {
+  margin: 30px 20px;
+  width: 800px;
+  word-wrap: break-word;
+  background: linear-gradient(180deg, #FAB74f 3.65%, rgba(250, 183, 79, 0) 100%);
+  border-radius: 5px;
+}
+
+.dashInfo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 main {
-  background-color: #EE6f69;
-  min-height: 100vh;
+  background-color: rgba(233, 150, 105, 0.4);
+  min-height: 95vh;
 }
 
 .question {
