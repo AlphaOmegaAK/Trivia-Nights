@@ -29,13 +29,17 @@ app.use(session({
   resave: false,
   saveUninitialized: true,
 
-}))
+}));
 
 
 // ?  Home Route
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+app.get('/login', (req, res) => {
+  res.render('login')
+})
 
 //?   User Route
 app.use('user', userCtrl);
