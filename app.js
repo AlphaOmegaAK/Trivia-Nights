@@ -1,10 +1,17 @@
+const path = require('path')
 const express = require('express');
 const mongoose = require('mongoose')
 const session = require('express-session');
 const methodOverride = require('method-override')
-require('dotenv').config;
+const dotenv = require('dotenv')
+const MongoStore = require('connect-mongo')(session)
 require('./models/db')
-// const MongoStore = require('connect-mongo')(session)
+
+//? Config Load
+dotenv.config({
+  path: './config/config.env'
+});
+
 
 const app = express();
 
@@ -24,12 +31,17 @@ app.use(express.urlencoded({
 }));
 
 
-// app.use(session({
-//   secret: 'keyboard cat',
-//   resave: false,
-//   saveUninitialized: true,
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: new MongoStore({
+      mongooseConnection: mongoose.connection
+    })
 
-// }));
+  })
+);
 
 
 // ?  Home Route
