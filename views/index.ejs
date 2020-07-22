@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trivia Nights</title>
-    <%- include('./partials/_head') %>
-  </head>
 
-  <body>
-    <main>
-      <%- include('./partials/_navBar') %>
-    </main>
-    <%- include('./partials/_footer') %>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia Nights</title>
+  <%- include('./partials/_head') %>
+</head>
+
+<body>
+  <main>
+    <%- include('./partials/_navBar') %>
+    <% questions.forEach(function(questions){ %>
+    <% answers.forEach(function(answers, index){ %>
+    <form action="/submitAnswer>
+      <label><%=questions%></label><br>
+      <input type=" radio" id="answer1" name="1" value="1">
+      <label for="1"><%= answer.index %></label><br>
+      <input type="radio" id="answer2" name="2" value="2">
+      <label for="2"><%= answer.index %></label><br>
+      <input type="radio" id="answer3" name="3" value="3">
+      <label for="3"><%= answer.index %></label>
+      <input type="radio" id="answer4" name="4" value="4">
+      <label for="4"><%= answer.index %></label>
+      <input type="submit" value="Submit">
+      <% }); >%
+  </main>
+  <%- include('./partials/_footer') %>
+</body>
+
 </html>
