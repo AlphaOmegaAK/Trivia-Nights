@@ -12,15 +12,28 @@
     <% questions.forEach(function(questions){ %>
     <form action="/submitAnswer">
       <label><%=questions.question%></label><br>
-      <input type="radio" id="answer1" name="1" value="1">
-      <label for="1">Answer 1</label><br>
-      <input type="radio" id="answer2" name="2" value="2">
-      <label for="2"><%=questions.answer%></label><br>
-      <input type="radio" id="answer3" name="3" value="3">
-      <label for="3">Answer 3</label>
-      <input type="radio" id="answer4" name="4" value="4">
-      <label for="4">Answer 4</label>
-      <input type="submit" value="Submit">
+
+      <div class="answer">
+        <input type="radio" id="answer1" name="1" value="1">
+        <label for="1">Answer 1</label><br>
+      </div>
+
+      <div class="answer">
+        <input type="radio" id="answer2" name="2" value="2">
+        <label for="2"><%=questions.answer%></label><br>
+      </div>
+
+      <div class="answer">
+        <input type="radio" id="answer3" name="3" value="3">
+        <label for="3">Answer 3</label>
+      </div>
+
+      <div class="answer">
+        <input type="radio" id="answer4" name="4" value="4">
+        <label for="4">Answer 4</label>
+      </div>
+
+      <input type="submit" value="Submit"> <br>
       <% }); %>
   </main>
   <%- include('./partials/_footer') %>

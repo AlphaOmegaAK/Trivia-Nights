@@ -55,3 +55,9 @@ footer {
   float: right;
   width: 40px;
 }
+
+.answer {
+  display: block;
+  margin-top: 30px;
+  font-size: 20px;
+}
