@@ -42,6 +42,11 @@ header {
   padding: 10px;
   border: none;
   border-radius: 7px;
+  width: 300px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
+  box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
 }
 
 .dash {
@@ -74,6 +79,9 @@ main {
   word-wrap: break-word;
   background: linear-gradient(180deg, #FAB74f 3.65%, rgba(250, 183, 79, 0) 100%);
   border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
+  box-shadow: 10px 10px 5px 0px rgba(199,189,199,1);
   }
 
 .questionArry {
@@ -102,13 +110,16 @@ footer {
   width: 100vw;
   padding: 2% 5%;
   font-size: 1.3em;
-
   text-align: center;
 }
 
 
 .fa-facebook {
   background-color: #3e5c9a;
+ 
+}
+.fa-facebook:hover {
+  float: right;
  
 }
 
@@ -123,12 +134,11 @@ footer {
  
 }
 
-
-
 /* Add a hover effect if you want */
 
 .fa:hover {
   opacity: 0.7;
+  float: right;
 }
 
 
@@ -150,4 +160,17 @@ footer {
 }
 .fa-github-square {
   color: #212121;
-  }
+}
+.nav-item {
+  font-size: 1.4em;
+  
+}
+label {
+  font-size: 20px;
+}
+#question {
+  font-size: 20px;
+}
+.prompt {
+  font-size: 30px;
+}
