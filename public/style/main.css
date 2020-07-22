@@ -8,6 +8,7 @@
 }
 
 /*  -----  */
+
 header {
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -19,10 +20,10 @@ header {
 
 main {
   min-height: 100vh;
-
 }
 
 /* ! Footer */
+
 footer {
   background-color: #000;
   width: 100vw;
@@ -33,6 +34,7 @@ footer {
 }
 
 /* ! Facebook */
+
 .fa-facebook {
   color: #3e5c9a;
   float: right;
@@ -44,8 +46,8 @@ footer {
   width: 40px;
 }
 
-
 /* ! Instagram */
+
 .fa-instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
@@ -57,24 +59,59 @@ footer {
 }
 
 .question {
-  margin: 10px 20px;
+  margin: 30px 20px;
   width: 1440px;
   height: 350px;
   left: 0px;
   top: 209px;
   background: linear-gradient(180deg, #EE6F69 0%, rgba(196, 85, 84, 0.46) 24.87%, rgba(196, 85, 84, 0) 100%);
-  border: 1px solid #1C1A1A;
-  box-sizing: border-box;
   border-radius: 5px;
   }
 
+.questionArry {
+  display: flex;
+  justify-content: center;
+}
+
   .prompt {
-    font-size: 20px;
+    color: #822223;
+    font-size: 25px;
     padding-left: 20px;
   }
 
 .answer {
+  color: #822223;
   display: block;
   margin-top: 30px;
+  padding-left: 15px;
   font-size: 20px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }
