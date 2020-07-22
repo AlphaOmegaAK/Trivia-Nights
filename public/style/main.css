@@ -18,8 +18,39 @@ header {
   z-index: 10;
 }
 
+#nav {
+  background: linear-gradient(179.46deg, #C45554 -6%, rgba(130, 34, 35, 0.2) 50.24%);
+}
+
 main {
   min-height: 100vh;
+}
+
+.question {
+  margin: 30px 20px;
+  width: 800px;
+  word-wrap: break-word;
+  background: linear-gradient(180deg, #EE6F69 0%, rgba(196, 85, 84, 0.46) 24.87%, rgba(196, 85, 84, 0) 100%);
+  border-radius: 5px;
+  }
+
+.questionArry {
+  display: flex;
+  justify-content: center;
+}
+
+  .prompt {
+    color: #822223;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+
+.answer {
+  color: #822223;
+  display: block;
+  margin-top: 30px;
+  padding-left: 15px;
+  font-size: 20px;
 }
 
 /* ! Footer */

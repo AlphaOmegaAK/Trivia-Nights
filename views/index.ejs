@@ -9,25 +9,43 @@
 <body>
   <main>
     <%- include('./partials/_navBar') %>
+
     <% questions.forEach(function(questions){ %>
-    <div id="question">
-      <form action="/submitAnswer">
-        <label><%=questions.question%></label>
-        <p>
-          <input type="radio" id="answer1" name="1" value="1">
-          <label for="1"><%=questions.wrongAnswers[0]%></label>
-        <p>
-          <input type="radio" id="answer2" name="2" value="2">
-          <label for="2"><%=questions.answer%></label>
-        <p>
-          <input type="radio" id="answer3" name="3" value="3">
-          <label for="3"><%=questions.wrongAnswers[1]%></label>
-        <p>
-          <input type="radio" id="answer4" name="4" value="4">
-          <label for="4"><%=questions.wrongAnswers[2]%></label>
-        <p>
-          <input type="submit" value="Submit">
-        <p>
+      <div class="questionArry">
+        <div id="question">
+          <form action="/submitAnswer">
+    
+            <div class="question">
+    
+              <label class="prompt"><%=questions.question%></label>
+              
+              <div class="answer">
+                <input type="radio" id="answer1" name="1" value="1">
+                <label for="1"><%=questions.wrongAnswers[0]%></label>
+              </div>
+      
+              <div class="answer">
+                <input type="radio" id="answer2" name="2" value="2">
+                <label for="2"><%=questions.answer%></label>
+              </div>
+      
+              <div class="answer">
+                <input type="radio" id="answer3" name="3" value="3">
+                <label for="3"><%=questions.wrongAnswers[1]%></label>
+              </div>
+      
+              <div class="answer">
+                <input type="radio" id="answer4" name="4" value="4">
+                <label for="4"><%=questions.wrongAnswers[2]%></label>
+              </div>
+    
+              <p>
+                <input type="submit" value="Submit">
+              <p>
+
+            </div>
+        </div>
+
     </div>
     <% }); %>
   </main>
