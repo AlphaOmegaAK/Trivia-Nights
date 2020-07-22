@@ -13,7 +13,7 @@
     <% questions.forEach(function(questions){ %>
       <div class="questionArry">
         <div id="question">
-          <form action="/submitAnswer">
+          <form action="/dash">
     
             <div class="question">
     
@@ -39,14 +39,15 @@
                 <label for="4"><%=questions.wrongAnswers[2]%></label>
               </div>
     
+              
+            </div>
+          </div>
+          
+        </div>
+        <% }); %>
               <div class="button">
                 <input type="submit" value="Submit" id="buttn">
               </div>
-            </div>
-        </div>
-
-    </div>
-    <% }); %>
   </main>
   <%- include('./partials/_footer') %>
 </body>
